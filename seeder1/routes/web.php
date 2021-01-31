@@ -16,3 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// BRANDS
+Route::get('/brands', 'BrandController@index') 
+-> name('brand-index');
+
+Route::get('/brand/{id}', 'BrandController@show') 
+-> name('brand-show');
+
+// SEATS
+Route::get('/seats', 'SeatController@index') 
+-> name('seats-index');
+
+Route::get('/seat/{id}', 'SeatController@show') 
+-> name('seat-show');
